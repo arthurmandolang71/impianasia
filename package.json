@@ -1,0 +1,13 @@
+{
+  "name": "impianasia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page PT Impian Asia Utama — Cloudflare Workers static assets",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}
