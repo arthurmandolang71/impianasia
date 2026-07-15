@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #051424;
+    color: #d4e4fa;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+  }
+  .glass-card {
+    background: rgba(18, 33, 49, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(65, 90, 119, 0.2);
+  }
+  .emerald-glow {
+    box-shadow: 0 0 20px rgba(78, 222, 163, 0.15);
+  }
+  .emerald-glow:hover {
+    box-shadow: 0 0 30px rgba(78, 222, 163, 0.3);
+  }
+}
+
+@layer utilities {
+  html {
+    scroll-behavior: smooth;
+  }
+}
