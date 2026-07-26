@@ -14,14 +14,32 @@
       var open = menu.classList.toggle("hidden") === false;
       menu.classList.toggle("flex", open);
       toggle.setAttribute("aria-expanded", String(open));
+      toggle.querySelector(".material-symbols-outlined").textContent = open ? "close" : "menu";
     });
     menu.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", function () {
         menu.classList.add("hidden");
         menu.classList.remove("flex");
         toggle.setAttribute("aria-expanded", "false");
+        toggle.querySelector(".material-symbols-outlined").textContent = "menu";
       });
     });
+  }
+
+  // Header: tambahkan shadow halus saat scroll
+  var header = document.getElementById("siteHeader");
+  if (header) {
+    var onScroll = function () {
+      if (window.scrollY > 8) {
+        header.classList.add("shadow-soft");
+        header.style.backgroundColor = "rgba(10, 20, 34, 0.92)";
+      } else {
+        header.classList.remove("shadow-soft");
+        header.style.backgroundColor = "rgba(10, 20, 34, 0.8)";
+      }
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
   }
 
   // Form kontak (demo — tanpa backend)
@@ -34,41 +52,29 @@
       var nama = (data.get("nama") || "").toString().trim();
       var email = (data.get("email") || "").toString().trim();
       if (!nama || !email) {
-        if (note) { note.textContent = "Mohon lengkapi nama dan email Anda."; note.style.color = "#ffb4ab"; }
+        if (note) { note.textContent = "Mohon lengkapi nama dan email Anda."; note.style.color = "#F87171"; }
         return;
       }
       if (note) {
         note.textContent = "Terima kasih, " + nama + "! Pesan Anda telah kami terima. Tim kami akan segera menghubungi Anda.";
-        note.style.color = "#4edea3";
+        note.style.color = "#34D399";
       }
       form.reset();
     });
   }
 
-  // Micro-interaction: posisi mouse pada glass card
-  document.querySelectorAll(".glass-card").forEach(function (card) {
-    card.addEventListener("mousemove", function (e) {
-      var rect = card.getBoundingClientRect();
-      card.style.setProperty("--mouse-x", (e.clientX - rect.left) + "px");
-      card.style.setProperty("--mouse-y", (e.clientY - rect.top) + "px");
-    });
-  });
-
-  // Reveal saat scroll
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "none";
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll(".glass-card, #about img, #testimonial p").forEach(function (el) {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(18px)";
-    el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-    observer.observe(el);
-  });
+  // Reveal saat scroll (progressive enhancement)
+  var revealTargets = document.querySelectorAll(".card, #about img, #survei .card, #produk .card");
+  if ("IntersectionObserver" in window) {
+    revealTargets.forEach(function (el) { el.classList.add("reveal"); });
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+    revealTargets.forEach(function (el) { observer.observe(el); });
+  }
 })();

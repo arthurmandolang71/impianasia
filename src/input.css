@@ -3,10 +3,43 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
-    background-color: #051424;
-    color: #d4e4fa;
-    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #0A1422;
+    color: #E8EDF5;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'cv11', 'ss01';
+    font-variation-settings: 'opsz' 32;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Subtle refinement: text selection */
+  ::selection {
+    background-color: rgba(52, 211, 153, 0.25);
+    color: #E8EDF5;
+  }
+
+  /* Refined scrollbar */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: #070F1A; }
+  ::-webkit-scrollbar-thumb {
+    background: #1E2D42;
+    border-radius: 9999px;
+    border: 2px solid #070F1A;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: #2A3F5A; }
+
+  /* Accessible focus ring */
+  :focus-visible {
+    outline: 2px solid #34D399;
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 }
 
@@ -22,22 +55,86 @@
     white-space: nowrap;
     word-wrap: normal;
     direction: ltr;
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
   }
-  .glass-card {
-    background: rgba(18, 33, 49, 0.7);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(65, 90, 119, 0.2);
+
+  /* Solid card — replaces glassmorphism for a cleaner, more premium feel */
+  .card {
+    background-color: #0F1B2D;
+    border: 1px solid #1E2D42;
+    border-radius: 1rem;
+    transition: border-color 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                background-color 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   }
-  .emerald-glow {
-    box-shadow: 0 0 20px rgba(78, 222, 163, 0.15);
+  .card-hover:hover {
+    border-color: rgba(52, 211, 153, 0.35);
+    background-color: #142336;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.35), 0 16px 40px rgba(0,0,0,0.25);
+    transform: translateY(-2px);
   }
-  .emerald-glow:hover {
-    box-shadow: 0 0 30px rgba(78, 222, 163, 0.3);
+
+  /* Subtle glow reserved for primary CTA only */
+  .cta-glow {
+    box-shadow: 0 0 0 1px rgba(52, 211, 153, 0.2), 0 8px 32px rgba(52, 211, 153, 0.15);
+  }
+  .cta-glow:hover {
+    box-shadow: 0 0 0 1px rgba(52, 211, 153, 0.3), 0 12px 40px rgba(52, 211, 153, 0.25);
+  }
+
+  /* Hairline divider */
+  .hairline {
+    border-color: #1E2D42;
   }
 }
 
 @layer utilities {
-  html {
-    scroll-behavior: smooth;
+  /* Refined gradient text accent for display headings */
+  .text-gradient {
+    background: linear-gradient(180deg, #E8EDF5 0%, #94A3B8 130%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .text-accent-gradient {
+    background: linear-gradient(135deg, #34D399 0%, #6EE7B7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Eyebrow label */
+  .eyebrow {
+    font-size: 0.75rem;
+    line-height: 1;
+    letter-spacing: 0.14em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  /* Subtle ambient glow (decorative) */
+  .ambient-glow {
+    background: radial-gradient(circle at center, rgba(52, 211, 153, 0.08) 0%, transparent 70%);
+  }
+
+  /* Reveal-on-scroll initial state (progressive enhancement) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    html { scroll-behavior: auto; }
+    .card-hover:hover { transform: none; }
   }
 }
