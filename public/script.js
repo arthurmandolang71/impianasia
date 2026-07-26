@@ -65,7 +65,7 @@
     });
   }, { threshold: 0.12 });
 
-  document.querySelectorAll(".glass-card, #about img, #portfolio p").forEach(function (el) {
+  document.querySelectorAll(".glass-card, #about img, #testimonial p").forEach(function (el) {
     el.style.opacity = "0";
     el.style.transform = "translateY(18px)";
     el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
