@@ -10,32 +10,29 @@
   var toggle = document.getElementById("menuToggle");
   var menu = document.getElementById("mobileMenu");
   if (toggle && menu) {
+    var icon = toggle.querySelector(".material-symbols-outlined");
     toggle.addEventListener("click", function () {
       var open = menu.classList.toggle("hidden") === false;
-      menu.classList.toggle("flex", open);
       toggle.setAttribute("aria-expanded", String(open));
-      toggle.querySelector(".material-symbols-outlined").textContent = open ? "close" : "menu";
+      if (icon) icon.textContent = open ? "close" : "menu";
     });
     menu.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", function () {
         menu.classList.add("hidden");
-        menu.classList.remove("flex");
         toggle.setAttribute("aria-expanded", "false");
-        toggle.querySelector(".material-symbols-outlined").textContent = "menu";
+        if (icon) icon.textContent = "menu";
       });
     });
   }
 
-  // Header: tambahkan shadow halus saat scroll
+  // Header: subtle border emphasis saat scroll
   var header = document.getElementById("siteHeader");
   if (header) {
     var onScroll = function () {
       if (window.scrollY > 8) {
-        header.classList.add("shadow-soft");
-        header.style.backgroundColor = "rgba(10, 20, 34, 0.92)";
+        header.classList.add("shadow-card");
       } else {
-        header.classList.remove("shadow-soft");
-        header.style.backgroundColor = "rgba(10, 20, 34, 0.8)";
+        header.classList.remove("shadow-card");
       }
     };
     onScroll();
@@ -57,14 +54,14 @@
       }
       if (note) {
         note.textContent = "Terima kasih, " + nama + "! Pesan Anda telah kami terima. Tim kami akan segera menghubungi Anda.";
-        note.style.color = "#34D399";
+        note.style.color = "#10B981";
       }
       form.reset();
     });
   }
 
   // Reveal saat scroll (progressive enhancement)
-  var revealTargets = document.querySelectorAll(".card, #about img, #survei .card, #produk .card");
+  var revealTargets = document.querySelectorAll(".card");
   if ("IntersectionObserver" in window) {
     revealTargets.forEach(function (el) { el.classList.add("reveal"); });
     var observer = new IntersectionObserver(function (entries) {
@@ -74,7 +71,7 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+    }, { threshold: 0.08, rootMargin: "0px 0px -40px 0px" });
     revealTargets.forEach(function (el) { observer.observe(el); });
   }
 })();

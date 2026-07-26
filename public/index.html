@@ -6,7 +6,7 @@
 <title>Jasa Pembuatan Website, SaaS & Survei Data Manado | PT Impian Asia Utama</title>
 <meta name="description" content="PT Impian Asia Utama — mitra teknologi & data di Manado, Sulawesi Utara. Jasa pembuatan website perusahaan, pengembangan aplikasi & SaaS, survei data PDRB, dan program pemberdayaan masyarakat. KBLI 63111 — Aktivitas Pengolahan Data." />
 <meta name="keywords" content="jasa pembuatan website, jasa pembuatan website perusahaan, software house manado, jasa pembuatan website manado, konsultan it, jasa pembuatan aplikasi, pengembangan saas, jasa maintenance website, company profile, survei pdrb, jasa survei data manado, pengolahan data, pemberdayaan masyarakat, aplikasi pengaduan masyarakat" />
-<meta name="theme-color" content="#0A1422" />
+<meta name="theme-color" content="#08090A" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <meta name="author" content="PT Impian Asia Utama" />
 <meta name="geo.region" content="ID-SA" />
@@ -34,19 +34,16 @@
 <link rel="apple-touch-icon" href="images/favicon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<!-- Critical inline CSS: prevents flash of unstyled background before styles.css loads -->
-<style>html{scroll-behavior:smooth}body{background:#0A1422;color:#E8EDF5;font-family:system-ui,-apple-system,sans-serif}</style>
-<!-- Built Tailwind CSS -->
+<style>html{scroll-behavior:smooth}body{background:#08090A;color:#FAFAFA;font-family:system-ui,-apple-system,sans-serif}</style>
 <link rel="stylesheet" href="styles.css" />
-<!-- Async font loading: non-render-blocking -->
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100..700,0..1,0&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100..700,0..1,0&display=swap">
 </noscript>
-<!-- Preload hero image (LCP element on desktop) -->
-<link rel="preload" as="image" href="images/team.webp" type="image/webp" media="(min-width:1024px)" fetchpriority="high" />
+<link rel="preload" as="image" href="images/hero-visual.svg" type="image/svg+xml" media="(min-width:1024px)" fetchpriority="high" />
+
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XYEFGE295Y"></script>
 <script>
@@ -145,226 +142,226 @@
 }
 </script>
 </head>
-<body class="antialiased">
+<body class="antialiased bg-sheen">
 
-<!-- ─────────────────── Header ─────────────────── -->
-<header id="siteHeader" class="bg-surface/80 backdrop-blur-xl sticky top-0 z-50 border-b border-outline-variant transition-all duration-300">
-  <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-16 md:h-20">
-    <a href="#top" class="flex items-center gap-3">
-      <picture>
-        <source srcset="images/logo.webp" type="image/webp">
-        <img alt="PT Impian Asia Utama" class="h-9 w-9 md:h-10 md:w-10 rounded-lg object-contain" src="images/logo.png" width="40" height="40" loading="eager" fetchpriority="high"/>
-      </picture>
-      <span class="text-base md:text-lg font-semibold tracking-tight text-on-surface">Impian Asia</span>
-    </a>
-    <nav class="hidden lg:flex items-center gap-8" aria-label="Navigasi utama">
-      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#services">Layanan</a>
-      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#produk">Produk</a>
-      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#survei">Survei PDRB</a>
-      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#about">Tentang</a>
-      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#legalitas">Legalitas</a>
-      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#faq">FAQ</a>
-    </nav>
-    <div class="flex items-center gap-3">
-      <a href="#contact" class="hidden sm:inline-flex items-center gap-1.5 bg-secondary text-on-secondary px-5 py-2 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition-all">
-        Konsultasi Gratis
+<!-- ═══════════════ Header ═══════════════ -->
+<header id="siteHeader" class="sticky top-0 z-50 border-b border-line-soft backdrop-blur-md bg-bg/70 transition-shadow duration-300">
+  <div class="max-w-container mx-auto px-px-x md:px-px-x-lg">
+    <div class="flex items-center justify-between h-16">
+      <a href="#top" class="flex items-center gap-2.5">
+        <picture>
+          <source srcset="images/logo.webp" type="image/webp">
+          <img alt="PT Impian Asia Utama" class="h-7 w-7 rounded-md object-contain" src="images/logo.png" width="28" height="28" loading="eager"/>
+        </picture>
+        <span class="text-[0.9375rem] font-semibold tracking-tight text-ink">Impian Asia</span>
       </a>
-      <button id="menuToggle" class="lg:hidden text-on-surface w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-bright transition-colors" aria-label="Buka menu" aria-expanded="false">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
+
+      <nav class="hidden lg:flex items-center gap-8" aria-label="Navigasi utama">
+        <a class="text-sm text-ink-soft hover:text-ink transition-colors" href="#services">Layanan</a>
+        <a class="text-sm text-ink-soft hover:text-ink transition-colors" href="#produk">Produk</a>
+        <a class="text-sm text-ink-soft hover:text-ink transition-colors" href="#survei">Survei PDRB</a>
+        <a class="text-sm text-ink-soft hover:text-ink transition-colors" href="#about">Tentang</a>
+        <a class="text-sm text-ink-soft hover:text-ink transition-colors" href="#legalitas">Legalitas</a>
+        <a class="text-sm text-ink-soft hover:text-ink transition-colors" href="#faq">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="#contact" class="hidden sm:inline-flex btn-primary px-4 py-2 rounded-md text-sm">
+          Konsultasi Gratis
+        </a>
+        <button id="menuToggle" class="lg:hidden w-9 h-9 flex items-center justify-center rounded-md text-ink-soft hover:text-ink hover:bg-surface transition-colors" aria-label="Buka menu" aria-expanded="false">
+          <span class="material-symbols-outlined text-[20px]">menu</span>
+        </button>
+      </div>
     </div>
   </div>
+
   <!-- Mobile menu -->
-  <nav id="mobileMenu" class="hidden lg:hidden border-t border-outline-variant bg-surface/95 backdrop-blur-xl px-margin-mobile py-4 flex-col gap-1">
-    <a class="block py-3 text-on-surface-variant hover:text-secondary transition-colors" href="#services">Layanan</a>
-    <a class="block py-3 text-on-surface-variant hover:text-secondary transition-colors" href="#produk">Produk</a>
-    <a class="block py-3 text-on-surface-variant hover:text-secondary transition-colors" href="#survei">Survei PDRB &amp; Pemberdayaan</a>
-    <a class="block py-3 text-on-surface-variant hover:text-secondary transition-colors" href="#about">Tentang Kami</a>
-    <a class="block py-3 text-on-surface-variant hover:text-secondary transition-colors" href="#legalitas">Legalitas</a>
-    <a class="block py-3 text-on-surface-variant hover:text-secondary transition-colors" href="#faq">FAQ</a>
-    <a class="block py-3 text-on-surface-variant hover:text-secondary transition-colors" href="#contact">Kontak</a>
-    <a class="mt-3 inline-flex bg-secondary text-on-secondary px-5 py-3 rounded-lg font-semibold justify-center" href="#contact">Konsultasi Gratis</a>
+  <nav id="mobileMenu" class="hidden lg:hidden border-t border-line-soft bg-bg/95 backdrop-blur-md">
+    <div class="max-w-container mx-auto px-px-x md:px-px-x-lg py-4 flex flex-col gap-1">
+      <a class="py-2.5 text-sm text-ink-soft hover:text-ink transition-colors" href="#services">Layanan</a>
+      <a class="py-2.5 text-sm text-ink-soft hover:text-ink transition-colors" href="#produk">Produk</a>
+      <a class="py-2.5 text-sm text-ink-soft hover:text-ink transition-colors" href="#survei">Survei PDRB</a>
+      <a class="py-2.5 text-sm text-ink-soft hover:text-ink transition-colors" href="#about">Tentang</a>
+      <a class="py-2.5 text-sm text-ink-soft hover:text-ink transition-colors" href="#legalitas">Legalitas</a>
+      <a class="py-2.5 text-sm text-ink-soft hover:text-ink transition-colors" href="#faq">FAQ</a>
+      <a class="py-2.5 text-sm text-ink-soft hover:text-ink transition-colors" href="#contact">Kontak</a>
+      <a class="mt-2 btn-primary px-4 py-2.5 rounded-md text-sm text-center" href="#contact">Konsultasi Gratis</a>
+    </div>
   </nav>
 </header>
 
 <main id="top">
 
-<!-- ─────────────────── Hero ─────────────────── -->
-<section class="relative overflow-hidden px-margin-mobile md:px-margin-desktop pt-20 pb-24 md:pt-28 md:pb-32">
-  <!-- Ambient background -->
-  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-    <div class="absolute top-0 right-0 w-2/3 h-full ambient-glow opacity-60"></div>
-    <div class="absolute top-1/4 -right-20 w-96 h-96 bg-tertiary/5 blur-[120px] rounded-full"></div>
-  </div>
+<!-- ═══════════════ Hero ═══════════════ -->
+<section class="border-b border-line-soft overflow-hidden">
+  <div class="max-w-container mx-auto px-px-x md:px-px-x-lg pt-20 pb-24 md:pt-28 md:pb-32">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
 
-  <div class="max-w-container-max mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative">
-    <div class="lg:col-span-6 z-10">
-      <p class="eyebrow text-secondary mb-6">Teknologi untuk Pertumbuhan</p>
-      <h1 class="text-display text-on-surface mb-6">
-        Mitra teknologi &amp; data untuk <span class="text-accent-gradient">Sulawesi Utara</span>
-      </h1>
-      <p class="text-body-lg text-on-surface-variant mb-10 max-w-xl">
-        Kami membangun website, aplikasi, dan platform data yang membantu pemerintah, BUMN, dan pelaku usaha mengelola layanan publik serta pertumbuhan bisnis secara modern dan efisien.
-      </p>
-      <div class="flex flex-wrap gap-4">
-        <a href="#contact" class="cta-glow bg-secondary text-on-secondary px-7 py-3.5 rounded-xl font-semibold hover:bg-opacity-90 transition-all flex items-center gap-2">
-          Mulai Konsultasi
-          <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-        </a>
-        <a href="#produk" class="border border-outline bg-surface-card/50 text-on-surface px-7 py-3.5 rounded-xl font-semibold hover:border-on-surface-variant/50 transition-all">
-          Lihat Produk Kami
-        </a>
-      </div>
-    </div>
-
-    <div class="lg:col-span-6 relative z-10">
-      <div class="relative">
-        <div class="card p-3 rounded-3xl overflow-hidden shadow-card">
-          <picture>
-            <source srcset="images/team.webp" type="image/webp">
-            <img alt="Tim software house PT Impian Asia Utama berkolaborasi mengembangkan website dan aplikasi" width="512" height="343" loading="eager" fetchpriority="high" class="rounded-2xl w-full h-auto object-cover" src="images/team.jpg"/>
-          </picture>
-        </div>
-        <!-- Floating credential card -->
-        <div class="absolute -bottom-6 -left-4 md:-left-6 card px-5 py-4 rounded-2xl shadow-card-hover">
-          <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-tertiary text-[24px]">verified</span>
-            <div>
-              <p class="text-sm font-semibold text-on-surface leading-tight">PT Resmi Terdaftar</p>
-              <p class="text-xs text-on-surface-variant">Kemenkumham RI · 2026</p>
-            </div>
-          </div>
+      <!-- Left 7/12 -->
+      <div class="lg:col-span-7">
+        <p class="eyebrow mb-7">Teknologi untuk Pertumbuhan</p>
+        <h1 class="text-display text-ink mb-7 max-w-[18ch]">
+          Mitra teknologi &amp; data untuk Sulawesi Utara.
+        </h1>
+        <p class="text-lead text-ink-soft mb-10 max-w-[48ch]">
+          Kami membangun website, aplikasi, dan platform data yang membantu pemerintah, BUMN, dan pelaku usaha mengelola layanan publik serta pertumbuhan bisnis secara modern dan efisien.
+        </p>
+        <div class="flex flex-wrap items-center gap-3">
+          <a href="#contact" class="btn-primary inline-flex items-center gap-1.5 px-6 py-3 rounded-md text-sm">
+            Mulai Konsultasi
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </a>
+          <a href="#produk" class="btn-ghost inline-flex items-center px-6 py-3 rounded-md text-sm">
+            Lihat Produk
+          </a>
         </div>
       </div>
+
+      <!-- Right 5/12 — custom SVG visual (replaces generic stock photo) -->
+      <div class="lg:col-span-5">
+        <div class="card overflow-hidden rounded-xl2 shadow-pop relative">
+          <img src="images/hero-visual.svg" alt="Visualisasi dashboard analitik dan infrastruktur data PT Impian Asia Utama" width="600" height="480" loading="eager" fetchpriority="high" class="w-full h-auto block"/>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ─────────────────── Services ─────────────────── -->
-<section class="py-24 md:py-32 px-margin-mobile md:px-margin-desktop border-t border-outline-variant" id="services">
-  <div class="max-w-container-max mx-auto">
+<!-- ═══════════════ Services ═══════════════ -->
+<section class="border-b border-line-soft" id="services">
+  <div class="max-w-container mx-auto px-px-x md:px-px-x-lg py-24 md:py-32">
     <div class="max-w-2xl mb-16">
-      <p class="eyebrow text-secondary mb-4">Layanan</p>
-      <h2 class="text-headline-xl text-on-surface mb-5">Solusi software house &amp; IT untuk bisnis Anda</h2>
-      <p class="text-body-lg text-on-surface-variant">
+      <p class="eyebrow mb-5">Layanan</p>
+      <h2 class="text-h2 text-ink mb-5">Solusi software house &amp; IT untuk bisnis Anda</h2>
+      <p class="text-lead text-ink-soft">
         Sebagai software house dan konsultan IT di Manado, kami menghadirkan jasa pembuatan website, pengembangan aplikasi, dan solusi digital yang tepat sasaran.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-      <div class="card card-hover p-8 rounded-2xl flex flex-col">
-        <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary mb-6">
-          <span class="material-symbols-outlined text-[26px]">language</span>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="card card-hover p-7 rounded-xl">
+        <div class="w-10 h-10 rounded-lg2 bg-surface-2 border border-line flex items-center justify-center text-accent mb-5">
+          <span class="material-symbols-outlined text-[20px]">language</span>
         </div>
-        <h3 class="text-headline-md text-on-surface mb-3">Pembuatan Website</h3>
-        <p class="text-body-md text-on-surface-variant mb-6 flex-grow">
+        <h3 class="text-h4 text-ink mb-2">Pembuatan Website</h3>
+        <p class="text-body text-ink-soft mb-5">
           Website perusahaan &amp; company profile yang responsif, cepat, SEO-friendly, dan dioptimalkan untuk konversi.
         </p>
-        <a class="text-secondary text-sm font-semibold flex items-center gap-1.5 hover:gap-2.5 transition-all" href="#contact">
-          Selengkapnya <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        <a class="inline-flex items-center gap-1 text-sm font-medium text-accent hover:gap-2 transition-all" href="#contact">
+          Selengkapnya <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
         </a>
       </div>
 
-      <div class="card card-hover p-8 rounded-2xl flex flex-col border-secondary/20">
-        <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary mb-6">
-          <span class="material-symbols-outlined text-[26px]">apps</span>
+      <div class="card card-hover p-7 rounded-xl">
+        <div class="w-10 h-10 rounded-lg2 bg-surface-2 border border-line flex items-center justify-center text-accent mb-5">
+          <span class="material-symbols-outlined text-[20px]">apps</span>
         </div>
-        <h3 class="text-headline-md text-on-surface mb-3">Aplikasi &amp; SaaS</h3>
-        <p class="text-body-md text-on-surface-variant mb-6 flex-grow">
+        <h3 class="text-h4 text-ink mb-2">Aplikasi &amp; SaaS</h3>
+        <p class="text-body text-ink-soft mb-5">
           Aplikasi mobile dan platform Software-as-a-Service yang scalable dan aman untuk mengotomatisasi proses bisnis Anda.
         </p>
-        <a class="text-secondary text-sm font-semibold flex items-center gap-1.5 hover:gap-2.5 transition-all" href="#contact">
-          Selengkapnya <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        <a class="inline-flex items-center gap-1 text-sm font-medium text-accent hover:gap-2 transition-all" href="#contact">
+          Selengkapnya <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
         </a>
       </div>
 
-      <div class="card card-hover p-8 rounded-2xl flex flex-col">
-        <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary mb-6">
-          <span class="material-symbols-outlined text-[26px]">insights</span>
+      <div class="card card-hover p-7 rounded-xl">
+        <div class="w-10 h-10 rounded-lg2 bg-surface-2 border border-line flex items-center justify-center text-accent mb-5">
+          <span class="material-symbols-outlined text-[20px]">insights</span>
         </div>
-        <h3 class="text-headline-md text-on-surface mb-3">Konsultan IT</h3>
-        <p class="text-body-md text-on-surface-variant mb-6 flex-grow">
+        <h3 class="text-h4 text-ink mb-2">Konsultan IT</h3>
+        <p class="text-body text-ink-soft mb-5">
           Strategi teknologi, transformasi digital, cloud migration, dan maintenance website untuk infrastruktur siap masa depan.
         </p>
-        <a class="text-secondary text-sm font-semibold flex items-center gap-1.5 hover:gap-2.5 transition-all" href="#contact">
-          Selengkapnya <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        <a class="inline-flex items-center gap-1 text-sm font-medium text-accent hover:gap-2 transition-all" href="#contact">
+          Selengkapnya <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
         </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─────────────────── Produk & Platform ─────────────────── -->
-<section class="py-24 md:py-32 px-margin-mobile md:px-margin-desktop bg-surface-dim border-y border-outline-variant" id="produk">
-  <div class="max-w-container-max mx-auto">
+<!-- ═══════════════ Produk ═══════════════ -->
+<section class="bg-bg-soft border-b border-line-soft" id="produk">
+  <div class="max-w-container mx-auto px-px-x md:px-px-x-lg py-24 md:py-32">
     <div class="max-w-2xl mb-16">
-      <p class="eyebrow text-secondary mb-4">Produk Berjalan</p>
-      <h2 class="text-headline-xl text-on-surface mb-5">Platform SaaS yang kami bangun &amp; operasikan</h2>
-      <p class="text-body-lg text-on-surface-variant">
+      <p class="eyebrow mb-5">Produk Berjalan</p>
+      <h2 class="text-h2 text-ink mb-5">Platform SaaS yang kami bangun &amp; operasikan</h2>
+      <p class="text-lead text-ink-soft">
         Dua platform aktif yang menjadi bukti nyata kapabilitas kami dalam pengumpulan data multi-kanal, pengolahan berbasis AI, dan dashboard analitik.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
       <!-- Pengaduan Ai -->
-      <article class="card p-8 rounded-2xl flex flex-col">
-        <div class="flex items-center gap-4 mb-6 pb-6 border-b border-outline-variant">
-          <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
-            <span class="material-symbols-outlined text-[26px]">forum</span>
+      <article class="card p-7 rounded-xl flex flex-col">
+        <div class="flex items-center justify-between gap-4 pb-5 mb-6 border-b border-line">
+          <div class="flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-lg2 bg-surface-2 border border-line flex items-center justify-center text-accent shrink-0">
+              <span class="material-symbols-outlined text-[20px]">forum</span>
+            </div>
+            <div>
+              <h3 class="text-h4 text-ink leading-tight">Pengaduan Ai</h3>
+              <p class="text-sm text-ink-mute mt-0.5">Manajemen pengaduan publik bertenaga AI</p>
+            </div>
           </div>
-          <div>
-            <h3 class="text-headline-md text-on-surface leading-tight">Pengaduan Ai</h3>
-            <a href="https://pengaduan.impian.asia" target="_blank" rel="noopener" class="text-sm text-secondary hover:underline">pengaduan.impian.asia</a>
-          </div>
+          <a href="https://pengaduan.impian.asia" target="_blank" rel="noopener" class="text-sm text-accent hover:underline shrink-0 hidden sm:inline-flex items-center gap-1">
+            Buka <span class="material-symbols-outlined text-[16px]">north_east</span>
+          </a>
         </div>
-        <p class="text-sm text-on-surface-muted mb-6 eyebrow">Manajemen pengaduan publik bertenaga AI</p>
-        <ul class="space-y-4 flex-grow">
+        <ul class="space-y-3.5 flex-grow">
           <li class="flex gap-3">
-            <span class="material-symbols-outlined text-secondary text-[20px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            <p class="text-body-md text-on-surface-variant"><strong class="text-on-surface font-semibold">Inbox omnichannel</strong> — menyatukan pengaduan dari WhatsApp, Email, Telegram, Instagram, Facebook, dan TikTok dalam satu layar.</p>
+            <span class="material-symbols-outlined text-accent text-[18px] mt-0.5 shrink-0">check</span>
+            <p class="text-body text-ink-soft"><span class="text-ink font-medium">Inbox omnichannel</span> — menyatukan pengaduan dari WhatsApp, Email, Telegram, Instagram, Facebook, dan TikTok dalam satu layar.</p>
           </li>
           <li class="flex gap-3">
-            <span class="material-symbols-outlined text-secondary text-[20px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            <p class="text-body-md text-on-surface-variant"><strong class="text-on-surface font-semibold">AI pipeline</strong> — klasifikasi, routing, ringkasan, dan draf balasan otomatis berbasis knowledge base instansi.</p>
+            <span class="material-symbols-outlined text-accent text-[18px] mt-0.5 shrink-0">check</span>
+            <p class="text-body text-ink-soft"><span class="text-ink font-medium">AI pipeline</span> — klasifikasi, routing, ringkasan, dan draf balasan otomatis berbasis knowledge base instansi.</p>
           </li>
           <li class="flex gap-3">
-            <span class="material-symbols-outlined text-secondary text-[20px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            <p class="text-body-md text-on-surface-variant"><strong class="text-on-surface font-semibold">Sesuai standar Ombudsman RI</strong> — nomor registrasi unik, SLA terjadwal, audit trail, dan kerahasiaan identitas pelapor.</p>
+            <span class="material-symbols-outlined text-accent text-[18px] mt-0.5 shrink-0">check</span>
+            <p class="text-body text-ink-soft"><span class="text-ink font-medium">Standar Ombudsman RI</span> — nomor registrasi unik, SLA terjadwal, audit trail, dan kerahasiaan identitas pelapor.</p>
           </li>
         </ul>
-        <p class="text-sm text-on-surface-muted mt-6 pt-6 border-t border-outline-variant">
+        <p class="text-xs text-ink-mute mt-6 pt-5 border-t border-line">
           Digunakan oleh kelurahan, instansi pemerintah, BUMN, dan BUMD.
         </p>
       </article>
 
       <!-- Jasaku -->
-      <article class="card p-8 rounded-2xl flex flex-col">
-        <div class="flex items-center gap-4 mb-6 pb-6 border-b border-outline-variant">
-          <div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary shrink-0">
-            <span class="material-symbols-outlined text-[26px]">receipt_long</span>
+      <article class="card p-7 rounded-xl flex flex-col">
+        <div class="flex items-center justify-between gap-4 pb-5 mb-6 border-b border-line">
+          <div class="flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-lg2 bg-surface-2 border border-line flex items-center justify-center text-accent shrink-0">
+              <span class="material-symbols-outlined text-[20px]">receipt_long</span>
+            </div>
+            <div>
+              <h3 class="text-h4 text-ink leading-tight">Jasaku</h3>
+              <p class="text-sm text-ink-mute mt-0.5">Akuntansi &amp; pajak otomatis untuk PT Perorangan</p>
+            </div>
           </div>
-          <div>
-            <h3 class="text-headline-md text-on-surface leading-tight">Jasaku</h3>
-            <a href="https://jasaku.impian.asia" target="_blank" rel="noopener" class="text-sm text-tertiary hover:underline">jasaku.impian.asia</a>
-          </div>
+          <a href="https://jasaku.impian.asia" target="_blank" rel="noopener" class="text-sm text-accent hover:underline shrink-0 hidden sm:inline-flex items-center gap-1">
+            Buka <span class="material-symbols-outlined text-[16px]">north_east</span>
+          </a>
         </div>
-        <p class="text-sm text-on-surface-muted mb-6 eyebrow">Akuntansi &amp; pajak otomatis untuk PT Perorangan</p>
-        <ul class="space-y-4 flex-grow">
+        <ul class="space-y-3.5 flex-grow">
           <li class="flex gap-3">
-            <span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            <p class="text-body-md text-on-surface-variant"><strong class="text-on-surface font-semibold">Pembukuan digital</strong> — laba rugi &amp; neraca otomatis tanpa perlu pemahaman akuntansi mendalam.</p>
+            <span class="material-symbols-outlined text-accent text-[18px] mt-0.5 shrink-0">check</span>
+            <p class="text-body text-ink-soft"><span class="text-ink font-medium">Pembukuan digital</span> — laba rugi &amp; neraca otomatis tanpa perlu pemahaman akuntansi mendalam.</p>
           </li>
           <li class="flex gap-3">
-            <span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            <p class="text-body-md text-on-surface-variant"><strong class="text-on-surface font-semibold">Kepatuhan pajak</strong> — mendukung PPh Final 0,5% dan PPh Badan Pasal 17/31E sesuai regulasi terbaru.</p>
+            <span class="material-symbols-outlined text-accent text-[18px] mt-0.5 shrink-0">check</span>
+            <p class="text-body text-ink-soft"><span class="text-ink font-medium">Kepatuhan pajak</span> — mendukung PPh Final 0,5% dan PPh Badan Pasal 17/31E sesuai regulasi terbaru.</p>
           </li>
           <li class="flex gap-3">
-            <span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            <p class="text-body-md text-on-surface-variant"><strong class="text-on-surface font-semibold">Otomatisasi operasional</strong> — invoice, penggajian, PPh 21/23, penyusutan aset, hingga pengingat jatuh tempo pajak.</p>
+            <span class="material-symbols-outlined text-accent text-[18px] mt-0.5 shrink-0">check</span>
+            <p class="text-body text-ink-soft"><span class="text-ink font-medium">Otomatisasi operasional</span> — invoice, penggajian, PPh 21/23, penyusutan aset, hingga pengingat jatuh tempo pajak.</p>
           </li>
         </ul>
-        <p class="text-sm text-on-surface-muted mt-6 pt-6 border-t border-outline-variant">
+        <p class="text-xs text-ink-mute mt-6 pt-5 border-t border-line">
           Dirancang untuk PT Perorangan, usaha jasa, dan pelaku usaha digital.
         </p>
       </article>
@@ -373,91 +370,86 @@
   </div>
 </section>
 
-<!-- ─────────────────── Survei PDRB & Pemberdayaan ─────────────────── -->
-<section class="py-24 md:py-32 px-margin-mobile md:px-margin-desktop" id="survei">
-  <div class="max-w-container-max mx-auto">
+<!-- ═══════════════ Survei PDRB ═══════════════ -->
+<section class="border-b border-line-soft" id="survei">
+  <div class="max-w-container mx-auto px-px-x md:px-px-x-lg py-24 md:py-32">
     <div class="max-w-2xl mb-16">
-      <p class="eyebrow text-tertiary mb-4">Layanan Data &amp; Pemberdayaan</p>
-      <h2 class="text-headline-xl text-on-surface mb-5">Survei PDRB &amp; pemberdayaan masyarakat</h2>
-      <p class="text-body-lg text-on-surface-variant">
+      <p class="eyebrow mb-5">Layanan Data &amp; Pemberdayaan</p>
+      <h2 class="text-h2 text-ink mb-5">Survei PDRB &amp; pemberdayaan masyarakat</h2>
+      <p class="text-lead text-ink-soft">
         Layanan yang dirancang khusus untuk Bank Indonesia, BUMN, dan pemerintah daerah di Sulawesi Utara — didukung izin Aktivitas Pengolahan Data (KBLI 63111) dan infrastruktur digital yang telah teruji.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-gutter">
-      <div class="card p-8 rounded-2xl">
-        <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary mb-5">
-          <span class="material-symbols-outlined text-[26px]">query_stats</span>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+      <div class="card p-7 rounded-xl">
+        <div class="w-10 h-10 rounded-lg2 bg-surface-2 border border-line flex items-center justify-center text-accent mb-5">
+          <span class="material-symbols-outlined text-[20px]">query_stats</span>
         </div>
-        <h3 class="text-headline-md text-on-surface mb-3">Survei &amp; Pengolahan Data PDRB</h3>
-        <p class="text-body-md text-on-surface-variant">
+        <h3 class="text-h4 text-ink mb-2.5">Survei &amp; Pengolahan Data PDRB</h3>
+        <p class="text-body text-ink-soft">
           Tim enumerator lokal, instrumen kuesioner mengikuti metodologi BPS/BI, input data lapangan berbasis WhatsApp/aplikasi, serta validasi &amp; analitik berbasis AI. Hasil tersaji dalam dashboard per sektor dan kewilayahan.
         </p>
       </div>
 
-      <div class="card p-8 rounded-2xl">
-        <div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary mb-5">
-          <span class="material-symbols-outlined text-[26px]">groups</span>
+      <div class="card p-7 rounded-xl">
+        <div class="w-10 h-10 rounded-lg2 bg-surface-2 border border-line flex items-center justify-center text-accent mb-5">
+          <span class="material-symbols-outlined text-[20px]">groups</span>
         </div>
-        <h3 class="text-headline-md text-on-surface mb-3">Pemberdayaan Masyarakat</h3>
-        <p class="text-body-md text-on-surface-variant">
+        <h3 class="text-h4 text-ink mb-2.5">Pemberdayaan Masyarakat</h3>
+        <p class="text-body text-ink-soft">
           Pemetaan potensi ekonomi lokal, pendampingan digitalisasi UMKM dengan Jasaku, kanal aspirasi warga via Pengaduan Ai, serta monitoring &amp; evaluasi program dalam dashboard transparan.
         </p>
       </div>
     </div>
 
-    <div class="flex justify-center">
-      <a href="#contact" class="inline-flex items-center gap-2 text-tertiary font-semibold hover:gap-3 transition-all">
-        Diskusikan kerja sama <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-      </a>
-    </div>
+    <a href="#contact" class="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:gap-2.5 transition-all">
+      Diskusikan kerja sama <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+    </a>
   </div>
 </section>
 
-<!-- ─────────────────── About + Keunggulan ─────────────────── -->
-<section class="py-24 md:py-32 px-margin-mobile md:px-margin-desktop bg-surface-dim border-y border-outline-variant" id="about">
-  <div class="max-w-container-max mx-auto">
+<!-- ═══════════════ About + Keunggulan ═══════════════ -->
+<section class="bg-bg-soft border-b border-line-soft" id="about">
+  <div class="max-w-container mx-auto px-px-x md:px-px-x-lg py-24 md:py-32">
 
     <!-- Profil -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-24">
-      <div class="lg:col-span-5 relative order-2 lg:order-1">
-        <picture>
-          <source srcset="images/about.webp" type="image/webp">
-          <img alt="Konsultan IT dan pengembang PT Impian Asia Utama di kantor Manado" width="512" height="512" loading="lazy" class="rounded-2xl shadow-card relative z-10 object-cover w-full aspect-[4/3]" src="images/about.jpg"/>
-        </picture>
-        <div class="absolute -bottom-6 -right-6 bg-surface-card border border-outline-variant px-6 py-5 rounded-2xl z-20 shadow-card-hover hidden sm:block">
-          <div class="text-2xl font-semibold text-tertiary leading-none">2026</div>
-          <p class="text-xs text-on-surface-variant mt-1">PT Resmi Terdaftar</p>
+      <div class="lg:col-span-5 order-2 lg:order-1">
+        <div class="card overflow-hidden p-1.5 rounded-xl2 shadow-raise">
+          <picture>
+            <source srcset="images/about.webp" type="image/webp">
+            <img alt="Konsultan IT dan pengembang PT Impian Asia Utama di kantor Manado" width="512" height="512" loading="lazy" class="rounded-lg2 w-full h-auto object-cover aspect-square" src="images/about.jpg"/>
+          </picture>
         </div>
       </div>
 
       <div class="lg:col-span-7 order-1 lg:order-2">
-        <p class="eyebrow text-secondary mb-4">Tentang Kami</p>
-        <h2 class="text-headline-xl text-on-surface mb-6">Sekilas tentang kami</h2>
-        <p class="text-body-lg text-on-surface-variant mb-5">
+        <p class="eyebrow mb-5">Tentang Kami</p>
+        <h2 class="text-h2 text-ink mb-5">Sekilas tentang kami</h2>
+        <p class="text-lead text-ink-soft mb-5">
           PT Impian Asia Utama adalah badan hukum Perseroan Perorangan (Usaha Mikro) berkedudukan di Manado, Sulawesi Utara — disahkan Kemenkumham RI pada 12 Juni 2026.
         </p>
-        <p class="text-body-md text-on-surface-variant mb-8">
+        <p class="text-body text-ink-soft mb-8">
           Berbekal izin usaha di bidang Aktivitas Pengolahan Data (KBLI 63111), kami membangun ekosistem digital yang membantu pemerintah, BUMN/BUMD, dan pelaku usaha di Sulawesi Utara mengelola data, layanan publik, dan kepatuhan administrasi secara modern, transparan, dan efisien.
         </p>
 
-        <!-- Visi & Misi ringkas -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="card p-5 rounded-xl">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="card p-5 rounded-lg2">
             <div class="flex items-center gap-2 mb-2">
-              <span class="material-symbols-outlined text-tertiary text-[20px]">visibility</span>
-              <h3 class="text-sm font-semibold text-on-surface">Visi</h3>
+              <span class="material-symbols-outlined text-accent text-[18px]">visibility</span>
+              <h3 class="text-h4 text-ink">Visi</h3>
             </div>
-            <p class="text-sm text-on-surface-variant leading-relaxed">
+            <p class="text-sm text-ink-soft leading-relaxed">
               Menjadi mitra teknologi &amp; data terpercaya bagi pemerintah, BUMN, dan masyarakat Sulawesi Utara.
             </p>
           </div>
-          <div class="card p-5 rounded-xl">
+          <div class="card p-5 rounded-lg2">
             <div class="flex items-center gap-2 mb-2">
-              <span class="material-symbols-outlined text-secondary text-[20px]">flag</span>
-              <h3 class="text-sm font-semibold text-on-surface">Misi</h3>
+              <span class="material-symbols-outlined text-accent text-[18px]">flag</span>
+              <h3 class="text-h4 text-ink">Misi</h3>
             </div>
-            <p class="text-sm text-on-surface-variant leading-relaxed">
+            <p class="text-sm text-ink-soft leading-relaxed">
               Membangun platform digital, mendukung kebijakan berbasis data, dan memberdayakan ekonomi lokal sesuai standar regulasi Indonesia.
             </p>
           </div>
@@ -465,36 +457,36 @@
       </div>
     </div>
 
-    <!-- Keunggulan inti (3 dari 6) -->
+    <!-- Keunggulan -->
     <div>
-      <p class="eyebrow text-secondary mb-4 text-center">Mengapa Bermitra</p>
-      <h3 class="text-headline-lg text-on-surface mb-12 text-center max-w-2xl mx-auto">Tiga alasan utama memilih kami</h3>
+      <p class="eyebrow mb-5">Mengapa Bermitra</p>
+      <h3 class="text-h2 text-ink mb-12 max-w-2xl">Tiga alasan utama memilih kami</h3>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-        <div class="card p-8 rounded-2xl">
-          <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary mb-5">
-            <span class="material-symbols-outlined text-[26px]">verified_user</span>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="card p-7 rounded-xl">
+          <div class="w-10 h-10 rounded-lg2 bg-surface-2 border border-line flex items-center justify-center text-accent mb-5">
+            <span class="material-symbols-outlined text-[20px]">verified_user</span>
           </div>
-          <h4 class="text-headline-sm text-on-surface mb-3">Legal &amp; berizin resmi</h4>
-          <p class="text-body-md text-on-surface-variant">
+          <h4 class="text-h4 text-ink mb-2.5">Legal &amp; berizin resmi</h4>
+          <p class="text-body text-ink-soft">
             Badan hukum sah dengan NIB dan KBLI aktif di bidang Aktivitas Pengolahan Data — dasar hukum yang jelas untuk pengumpulan &amp; pengolahan data.
           </p>
         </div>
-        <div class="card p-8 rounded-2xl">
-          <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary mb-5">
-            <span class="material-symbols-outlined text-[26px]">smart_toy</span>
+        <div class="card p-7 rounded-xl">
+          <div class="w-10 h-10 rounded-lg2 bg-surface-2 border border-line flex items-center justify-center text-accent mb-5">
+            <span class="material-symbols-outlined text-[20px]">smart_toy</span>
           </div>
-          <h4 class="text-headline-sm text-on-surface mb-3">Berbasis teknologi nyata</h4>
-          <p class="text-body-md text-on-surface-variant">
+          <h4 class="text-h4 text-ink mb-2.5">Berbasis teknologi nyata</h4>
+          <p class="text-body text-ink-soft">
             Dua produk SaaS — Pengaduan Ai dan Jasaku — sudah berjalan dan aktif melayani instansi serta pelaku usaha nyata, bukan sekadar wacana.
           </p>
         </div>
-        <div class="card p-8 rounded-2xl">
-          <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary mb-5">
-            <span class="material-symbols-outlined text-[26px]">location_on</span>
+        <div class="card p-7 rounded-xl">
+          <div class="w-10 h-10 rounded-lg2 bg-surface-2 border border-line flex items-center justify-center text-accent mb-5">
+            <span class="material-symbols-outlined text-[20px]">location_on</span>
           </div>
-          <h4 class="text-headline-sm text-on-surface mb-3">Berakar di Sulawesi Utara</h4>
-          <p class="text-body-md text-on-surface-variant">
+          <h4 class="text-h4 text-ink mb-2.5">Berakar di Sulawesi Utara</h4>
+          <p class="text-body text-ink-soft">
             Berkedudukan di Manado, memahami konteks wilayah dan jejaring pemerintahan daerah, serta mampu merespons cepat kebutuhan mitra lokal.
           </p>
         </div>
@@ -504,69 +496,69 @@
   </div>
 </section>
 
-<!-- ─────────────────── Legalitas ─────────────────── -->
-<section class="py-24 md:py-32 px-margin-mobile md:px-margin-desktop" id="legalitas">
-  <div class="max-w-container-max mx-auto">
+<!-- ═══════════════ Legalitas ═══════════════ -->
+<section class="border-b border-line-soft" id="legalitas">
+  <div class="max-w-container mx-auto px-px-x md:px-px-x-lg py-24 md:py-32">
     <div class="max-w-2xl mb-16">
-      <p class="eyebrow text-secondary mb-4">Legalitas</p>
-      <h2 class="text-headline-xl text-on-surface mb-5">Legalitas &amp; struktur perusahaan</h2>
-      <p class="text-body-lg text-on-surface-variant">
+      <p class="eyebrow mb-5">Legalitas</p>
+      <h2 class="text-h2 text-ink mb-5">Legalitas &amp; struktur perusahaan</h2>
+      <p class="text-lead text-ink-soft">
         Data legal perusahaan yang dapat diverifikasi oleh calon mitra, pemberi kerja, dan instansi pemerintah.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
-      <div class="card rounded-2xl p-8 lg:col-span-2">
-        <h3 class="text-headline-sm text-on-surface mb-6">Legalitas Perusahaan</h3>
-        <dl class="divide-y divide-outline-variant">
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 py-4">
-            <dt class="text-sm text-on-surface-muted">Nama Perusahaan</dt>
-            <dd class="sm:col-span-2 text-body-md text-on-surface">PT Impian Asia Utama (Perseroan Perorangan)</dd>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div class="card rounded-xl p-7 lg:col-span-2">
+        <h3 class="text-h4 text-ink mb-5">Legalitas Perusahaan</h3>
+        <dl class="divide-y divide-line">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 py-3.5">
+            <dt class="text-sm text-ink-mute">Nama Perusahaan</dt>
+            <dd class="sm:col-span-2 text-body text-ink">PT Impian Asia Utama (Perseroan Perorangan)</dd>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 py-4">
-            <dt class="text-sm text-on-surface-muted">Bentuk Badan Hukum</dt>
-            <dd class="sm:col-span-2 text-body-md text-on-surface">Perseroan Perorangan — Usaha Mikro</dd>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 py-3.5">
+            <dt class="text-sm text-ink-mute">Bentuk Badan Hukum</dt>
+            <dd class="sm:col-span-2 text-body text-ink">Perseroan Perorangan — Usaha Mikro</dd>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 py-4">
-            <dt class="text-sm text-on-surface-muted">No. SK Kemenkumham</dt>
-            <dd class="sm:col-span-2 text-body-md text-on-surface">AHU-A096263.AH.01.30.Tahun 2026 <span class="text-on-surface-muted">(12 Juni 2026)</span></dd>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 py-3.5">
+            <dt class="text-sm text-ink-mute">No. SK Kemenkumham</dt>
+            <dd class="sm:col-span-2 text-body text-ink">AHU-A096263.AH.01.30.Tahun 2026 <span class="text-ink-mute">(12 Juni 2026)</span></dd>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 py-4">
-            <dt class="text-sm text-on-surface-muted">NIB</dt>
-            <dd class="sm:col-span-2 text-body-md text-on-surface">1506260002309</dd>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 py-3.5">
+            <dt class="text-sm text-ink-mute">NIB</dt>
+            <dd class="sm:col-span-2 text-body text-ink">1506260002309</dd>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 py-4">
-            <dt class="text-sm text-on-surface-muted">Bidang Usaha (KBLI)</dt>
-            <dd class="sm:col-span-2 text-body-md text-on-surface">63111 — Aktivitas Pengolahan Data</dd>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 py-3.5">
+            <dt class="text-sm text-ink-mute">Bidang Usaha (KBLI)</dt>
+            <dd class="sm:col-span-2 text-body text-ink">63111 — Aktivitas Pengolahan Data</dd>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 py-4">
-            <dt class="text-sm text-on-surface-muted">Status Pajak</dt>
-            <dd class="sm:col-span-2 text-body-md text-on-surface">Non-Pengusaha Kena Pajak (Non-PKP) · PMDN</dd>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 py-3.5">
+            <dt class="text-sm text-ink-mute">Status Pajak</dt>
+            <dd class="sm:col-span-2 text-body text-ink">Non-PKP · PMDN</dd>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 py-4">
-            <dt class="text-sm text-on-surface-muted">Alamat Kantor</dt>
-            <dd class="sm:col-span-2 text-body-md text-on-surface">Jl. 14 Februari No. 99, Kel. Teling Atas, Kec. Wanea, Kota Manado, Sulawesi Utara 95119</dd>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 py-3.5">
+            <dt class="text-sm text-ink-mute">Alamat Kantor</dt>
+            <dd class="sm:col-span-2 text-body text-ink">Jl. 14 Februari No. 99, Kel. Teling Atas, Kec. Wanea, Kota Manado, Sulawesi Utara 95119</dd>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 py-4">
-            <dt class="text-sm text-on-surface-muted">Direktur / Pemilik</dt>
-            <dd class="sm:col-span-2 text-body-md text-on-surface">Mega Putri Kesek</dd>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 py-3.5">
+            <dt class="text-sm text-ink-mute">Direktur / Pemilik</dt>
+            <dd class="sm:col-span-2 text-body text-ink">Mega Putri Kesek</dd>
           </div>
         </dl>
       </div>
 
-      <div class="card rounded-2xl p-8 flex flex-col">
-        <h3 class="text-headline-sm text-on-surface mb-4">Struktur Perusahaan</h3>
-        <p class="text-body-md text-on-surface-variant mb-8">
+      <div class="card rounded-xl p-7 flex flex-col">
+        <h3 class="text-h4 text-ink mb-4">Struktur Perusahaan</h3>
+        <p class="text-body text-ink-soft mb-7">
           Perseroan Perorangan dengan satu pendiri sekaligus pemegang jabatan Direktur. Seluruh keputusan strategis, administratif, dan teknis ditangani langsung — sehingga kerja sama berlangsung cepat dan efisien.
         </p>
-        <div class="mt-auto space-y-5 pt-6 border-t border-outline-variant">
+        <div class="mt-auto space-y-5 pt-6 border-t border-line">
           <div>
-            <p class="text-xs text-on-surface-muted mb-1 eyebrow">Direktur / Pemilik</p>
-            <p class="text-headline-sm text-secondary">Mega Putri Kesek</p>
+            <p class="text-xs text-ink-mute eyebrow-bare mb-1.5">Direktur / Pemilik</p>
+            <p class="text-h4 text-accent">Mega Putri Kesek</p>
           </div>
           <div>
-            <p class="text-xs text-on-surface-muted mb-1 eyebrow">Domisili</p>
-            <p class="text-body-md text-on-surface">Kota Manado, Sulawesi Utara</p>
+            <p class="text-xs text-ink-mute eyebrow-bare mb-1.5">Domisili</p>
+            <p class="text-body text-ink">Kota Manado, Sulawesi Utara</p>
           </div>
         </div>
       </div>
@@ -574,202 +566,201 @@
   </div>
 </section>
 
-<!-- ─────────────────── FAQ ─────────────────── -->
-<section class="py-24 md:py-32 px-margin-mobile md:px-margin-desktop bg-surface-dim border-y border-outline-variant" id="faq">
-  <div class="max-w-3xl mx-auto">
-    <div class="text-center mb-16">
-      <p class="eyebrow text-secondary mb-4">FAQ</p>
-      <h2 class="text-headline-xl text-on-surface mb-5">Pertanyaan yang sering diajukan</h2>
-    </div>
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section class="bg-bg-soft border-b border-line-soft" id="faq">
+  <div class="max-w-3xl mx-auto px-px-x md:px-px-x-lg py-24 md:py-32">
+    <p class="eyebrow mb-5">FAQ</p>
+    <h2 class="text-h2 text-ink mb-12">Pertanyaan yang sering diajukan</h2>
     <div class="space-y-3">
-      <details class="card rounded-xl p-6 group">
-        <summary class="flex items-center justify-between cursor-pointer list-none text-headline-sm text-on-surface">
+      <details class="card rounded-lg2 group">
+        <summary class="flex items-center justify-between cursor-pointer list-none p-5 text-h4 text-ink">
           Apa itu jasa pembuatan website perusahaan?
-          <span class="material-symbols-outlined text-on-surface-muted transition-transform group-open:rotate-180">expand_more</span>
+          <span class="material-symbols-outlined text-ink-mute text-[20px] transition-transform group-open:rotate-180">expand_more</span>
         </summary>
-        <p class="text-body-md text-on-surface-variant mt-4">
+        <p class="text-body text-ink-soft px-5 pb-5">
           Layanan merancang dan membangun situs resmi bisnis Anda — company profile, landing page, hingga website dengan fitur kompleks. Kami membangun website yang responsif, cepat, SEO-friendly, dan siap mendukung pertumbuhan brand Anda.
         </p>
       </details>
-      <details class="card rounded-xl p-6 group">
-        <summary class="flex items-center justify-between cursor-pointer list-none text-headline-sm text-on-surface">
+      <details class="card rounded-lg2 group">
+        <summary class="flex items-center justify-between cursor-pointer list-none p-5 text-h4 text-ink">
           Berapa biaya dan lama pengerjaan website?
-          <span class="material-symbols-outlined text-on-surface-muted transition-transform group-open:rotate-180">expand_more</span>
+          <span class="material-symbols-outlined text-ink-mute text-[20px] transition-transform group-open:rotate-180">expand_more</span>
         </summary>
-        <p class="text-body-md text-on-surface-variant mt-4">
+        <p class="text-body text-ink-soft px-5 pb-5">
           Biaya bergantung pada jenis website, jumlah halaman, dan fitur. Company profile umumnya selesai dalam 2–4 minggu; aplikasi web atau SaaS kompleks membutuhkan waktu lebih. Kami menawarkan konsultasi gratis untuk menyusun penawaran transparan sesuai anggaran Anda.
         </p>
       </details>
-      <details class="card rounded-xl p-6 group">
-        <summary class="flex items-center justify-between cursor-pointer list-none text-headline-sm text-on-surface">
+      <details class="card rounded-lg2 group">
+        <summary class="flex items-center justify-between cursor-pointer list-none p-5 text-h4 text-ink">
           Apakah tersedia layanan maintenance?
-          <span class="material-symbols-outlined text-on-surface-muted transition-transform group-open:rotate-180">expand_more</span>
+          <span class="material-symbols-outlined text-ink-mute text-[20px] transition-transform group-open:rotate-180">expand_more</span>
         </summary>
-        <p class="text-body-md text-on-surface-variant mt-4">
+        <p class="text-body text-ink-soft px-5 pb-5">
           Ya. Kami menyediakan maintenance website dan dukungan teknis — mencakup pembaruan keamanan, optimasi performa, serta pemantauan agar website Anda selalu aktif dan optimal.
         </p>
       </details>
-      <details class="card rounded-xl p-6 group">
-        <summary class="flex items-center justify-between cursor-pointer list-none text-headline-sm text-on-surface">
+      <details class="card rounded-lg2 group">
+        <summary class="flex items-center justify-between cursor-pointer list-none p-5 text-h4 text-ink">
           Apakah Impian Asia melayani survei data PDRB?
-          <span class="material-symbols-outlined text-on-surface-muted transition-transform group-open:rotate-180">expand_more</span>
+          <span class="material-symbols-outlined text-ink-mute text-[20px] transition-transform group-open:rotate-180">expand_more</span>
         </summary>
-        <p class="text-body-md text-on-surface-variant mt-4">
-          Ya. Dengan izin Aktivitas Pengolahan Data (KBLI 63111), kami menyediakan tim enumerator lokal, kuesioner mengikuti metodologi BPS/BI, digitalisasi input data lapangan, validasi berbasis AI, serta pelaporan dalam dashboard berkala. <a class="text-secondary hover:underline" href="#survei">Lihat detail layanan</a>.
+        <p class="text-body text-ink-soft px-5 pb-5">
+          Ya. Dengan izin Aktivitas Pengolahan Data (KBLI 63111), kami menyediakan tim enumerator lokal, kuesioner mengikuti metodologi BPS/BI, digitalisasi input data lapangan, validasi berbasis AI, serta pelaporan dalam dashboard berkala. <a class="text-accent hover:underline" href="#survei">Lihat detail layanan</a>.
         </p>
       </details>
-      <details class="card rounded-xl p-6 group">
-        <summary class="flex items-center justify-between cursor-pointer list-none text-headline-sm text-on-surface">
+      <details class="card rounded-lg2 group">
+        <summary class="flex items-center justify-between cursor-pointer list-none p-5 text-h4 text-ink">
           Apakah PT Impian Asia Utama sudah berbadan hukum resmi?
-          <span class="material-symbols-outlined text-on-surface-muted transition-transform group-open:rotate-180">expand_more</span>
+          <span class="material-symbols-outlined text-ink-mute text-[20px] transition-transform group-open:rotate-180">expand_more</span>
         </summary>
-        <p class="text-body-md text-on-surface-variant mt-4">
-          Sudah. Kami disahkan Kemenkumham RI melalui SK Nomor AHU-A096263.AH.01.30.Tahun 2026 (12 Juni 2026), dengan NIB 1506260002309 dan KBLI 63111. Detail lengkap pada bagian <a class="text-secondary hover:underline" href="#legalitas">Legalitas</a>.
+        <p class="text-body text-ink-soft px-5 pb-5">
+          Sudah. Kami disahkan Kemenkumham RI melalui SK Nomor AHU-A096263.AH.01.30.Tahun 2026 (12 Juni 2026), dengan NIB 1506260002309 dan KBLI 63111. Detail lengkap pada bagian <a class="text-accent hover:underline" href="#legalitas">Legalitas</a>.
         </p>
       </details>
     </div>
   </div>
 </section>
 
-<!-- ─────────────────── Contact / CTA ─────────────────── -->
-<section class="py-24 md:py-32 px-margin-mobile md:px-margin-desktop" id="contact">
-  <div class="max-w-container-max mx-auto">
-    <div class="card rounded-4xl overflow-hidden relative">
-      <div class="absolute inset-0 ambient-glow opacity-50 pointer-events-none"></div>
-      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 p-8 sm:p-12 lg:p-16">
+<!-- ═══════════════ Contact ═══════════════ -->
+<section id="contact">
+  <div class="max-w-container mx-auto px-px-x md:px-px-x-lg py-24 md:py-32">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
 
-        <div>
-          <p class="eyebrow text-secondary mb-4">Kontak</p>
-          <h2 class="text-headline-xl text-on-surface mb-5">Hubungi kami</h2>
-          <p class="text-body-lg text-on-surface-variant mb-10">
-            Kami siap mendiskusikan peluang kerja sama survei PDRB, pemberdayaan masyarakat, website, aplikasi, dan platform digital bisnis Anda.
-          </p>
+      <!-- Left: info -->
+      <div>
+        <p class="eyebrow mb-5">Kontak</p>
+        <h2 class="text-h2 text-ink mb-5">Hubungi kami</h2>
+        <p class="text-lead text-ink-soft mb-10 max-w-[48ch]">
+          Kami siap mendiskusikan peluang kerja sama survei PDRB, pemberdayaan masyarakat, website, aplikasi, dan platform digital bisnis Anda.
+        </p>
 
-          <div class="space-y-5">
-            <a href="https://wa.me/6281545452746" target="_blank" rel="noopener" class="flex items-start gap-4 group">
-              <span class="material-symbols-outlined text-secondary shrink-0 mt-0.5">call</span>
-              <div>
-                <p class="text-xs text-on-surface-muted eyebrow mb-1">WhatsApp / Telepon</p>
-                <p class="text-body-md text-on-surface group-hover:text-secondary transition-colors">0815-4545-2746</p>
-              </div>
-            </a>
-            <a href="mailto:admin@impian.asia" class="flex items-start gap-4 group">
-              <span class="material-symbols-outlined text-secondary shrink-0 mt-0.5">mail</span>
-              <div>
-                <p class="text-xs text-on-surface-muted eyebrow mb-1">Email</p>
-                <p class="text-body-md text-on-surface group-hover:text-secondary transition-colors">admin@impian.asia</p>
-              </div>
-            </a>
-            <div class="flex items-start gap-4">
-              <span class="material-symbols-outlined text-secondary shrink-0 mt-0.5">location_on</span>
-              <div>
-                <p class="text-xs text-on-surface-muted eyebrow mb-1">Alamat</p>
-                <p class="text-body-md text-on-surface">Jl. 14 Februari No. 99, Kel. Teling Atas, Kec. Wanea, Kota Manado, Sulawesi Utara 95119</p>
-              </div>
+        <div class="space-y-1">
+          <a href="https://wa.me/6281545452746" target="_blank" rel="noopener" class="flex items-center gap-4 py-4 border-t border-line group">
+            <span class="material-symbols-outlined text-accent text-[20px]">call</span>
+            <div class="flex-1">
+              <p class="text-xs text-ink-mute eyebrow-bare mb-0.5">WhatsApp / Telepon</p>
+              <p class="text-body text-ink group-hover:text-accent transition-colors">0815-4545-2746</p>
+            </div>
+            <span class="material-symbols-outlined text-ink-mute text-[18px] group-hover:text-accent transition-colors">arrow_forward</span>
+          </a>
+          <a href="mailto:admin@impian.asia" class="flex items-center gap-4 py-4 border-t border-line group">
+            <span class="material-symbols-outlined text-accent text-[20px]">mail</span>
+            <div class="flex-1">
+              <p class="text-xs text-ink-mute eyebrow-bare mb-0.5">Email</p>
+              <p class="text-body text-ink group-hover:text-accent transition-colors">admin@impian.asia</p>
+            </div>
+            <span class="material-symbols-outlined text-ink-mute text-[18px] group-hover:text-accent transition-colors">arrow_forward</span>
+          </a>
+          <div class="flex items-start gap-4 py-4 border-t border-line">
+            <span class="material-symbols-outlined text-accent text-[20px] mt-0.5">location_on</span>
+            <div class="flex-1">
+              <p class="text-xs text-ink-mute eyebrow-bare mb-0.5">Alamat</p>
+              <p class="text-body text-ink">Jl. 14 Februari No. 99, Kel. Teling Atas, Kec. Wanea, Kota Manado, Sulawesi Utara 95119</p>
             </div>
           </div>
         </div>
+      </div>
 
-        <div>
-          <form id="contactForm" class="space-y-4" novalidate>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label for="cf-nama" class="block text-xs text-on-surface-muted eyebrow mb-2">Nama</label>
-                <input id="cf-nama" type="text" name="nama" required placeholder="Nama Anda"
-                  class="w-full bg-surface-bright/50 border border-outline-variant rounded-xl px-4 py-3 text-on-surface placeholder:text-on-surface-muted focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-colors" />
-              </div>
-              <div>
-                <label for="cf-email" class="block text-xs text-on-surface-muted eyebrow mb-2">Email</label>
-                <input id="cf-email" type="email" name="email" required placeholder="email@anda.com"
-                  class="w-full bg-surface-bright/50 border border-outline-variant rounded-xl px-4 py-3 text-on-surface placeholder:text-on-surface-muted focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-colors" />
-              </div>
+      <!-- Right: form -->
+      <div>
+        <form id="contactForm" class="card p-6 sm:p-7 rounded-xl space-y-4" novalidate>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="cf-nama" class="block text-xs text-ink-mute mb-2 eyebrow-bare">Nama</label>
+              <input id="cf-nama" type="text" name="nama" required placeholder="Nama Anda"
+                class="w-full bg-surface border border-line rounded-lg2 px-3.5 py-2.5 text-body text-ink placeholder:text-ink-mute focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-colors" />
             </div>
             <div>
-              <label for="cf-pesan" class="block text-xs text-on-surface-muted eyebrow mb-2">Pesan</label>
-              <textarea id="cf-pesan" name="pesan" rows="4" placeholder="Ceritakan kebutuhan Anda..."
-                class="w-full bg-surface-bright/50 border border-outline-variant rounded-xl px-4 py-3 text-on-surface placeholder:text-on-surface-muted focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-colors resize-none"></textarea>
+              <label for="cf-email" class="block text-xs text-ink-mute mb-2 eyebrow-bare">Email</label>
+              <input id="cf-email" type="email" name="email" required placeholder="email@anda.com"
+                class="w-full bg-surface border border-line rounded-lg2 px-3.5 py-2.5 text-body text-ink placeholder:text-ink-mute focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-colors" />
             </div>
-            <button type="submit" class="cta-glow w-full bg-secondary text-on-secondary px-8 py-4 rounded-xl font-semibold hover:bg-opacity-90 transition-all flex items-center justify-center gap-2">
-              Mulai Konsultasi Gratis
-              <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-            </button>
-            <p id="formNote" class="text-sm text-secondary text-center" role="status" aria-live="polite"></p>
-          </form>
-        </div>
-
+          </div>
+          <div>
+            <label for="cf-pesan" class="block text-xs text-ink-mute mb-2 eyebrow-bare">Pesan</label>
+            <textarea id="cf-pesan" name="pesan" rows="5" placeholder="Ceritakan kebutuhan Anda..."
+              class="w-full bg-surface border border-line rounded-lg2 px-3.5 py-2.5 text-body text-ink placeholder:text-ink-mute focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-colors resize-none"></textarea>
+          </div>
+          <button type="submit" class="btn-primary w-full px-5 py-3 rounded-md text-sm flex items-center justify-center gap-1.5">
+            Mulai Konsultasi Gratis
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </button>
+          <p id="formNote" class="text-sm text-accent text-center" role="status" aria-live="polite"></p>
+        </form>
       </div>
+
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- ─────────────────── Footer ─────────────────── -->
-<footer class="bg-surface-dim border-t border-outline-variant">
-  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-gutter">
+<!-- ═══════════════ Footer ═══════════════ -->
+<footer class="border-t border-line-soft">
+  <div class="max-w-container mx-auto px-px-x md:px-px-x-lg py-14">
+    <div class="grid grid-cols-2 md:grid-cols-12 gap-8 md:gap-10">
 
-      <div class="col-span-2 md:col-span-1">
-        <div class="flex items-center gap-3 mb-5">
+      <div class="col-span-2 md:col-span-5">
+        <a href="#top" class="flex items-center gap-2.5 mb-4">
           <picture>
             <source srcset="images/logo.webp" type="image/webp">
-            <img alt="Impian Asia" class="h-9 w-9 rounded-lg object-contain" src="images/logo.png" width="36" height="36" loading="lazy"/>
+            <img alt="Impian Asia" class="h-7 w-7 rounded-md object-contain" src="images/logo.png" width="28" height="28" loading="lazy"/>
           </picture>
-          <span class="text-base font-semibold text-on-surface">Impian Asia</span>
-        </div>
-        <p class="text-sm text-on-surface-variant leading-relaxed mb-5">
+          <span class="text-[0.9375rem] font-semibold text-ink">Impian Asia</span>
+        </a>
+        <p class="text-sm text-ink-soft leading-relaxed max-w-sm mb-5">
           Mitra teknologi &amp; data untuk layanan publik, riset ekonomi daerah, dan pemberdayaan masyarakat di Sulawesi Utara.
         </p>
-        <div class="flex gap-3">
-          <a class="w-9 h-9 rounded-lg bg-surface-card border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-secondary hover:border-secondary/40 transition-all" href="https://www.facebook.com/profile.php?id=61590664471754" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg>
+        <div class="flex gap-2">
+          <a class="w-8 h-8 rounded-md bg-surface border border-line flex items-center justify-center text-ink-soft hover:text-accent hover:border-line-strong transition-all" href="https://www.facebook.com/profile.php?id=61590664471754" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg>
           </a>
-          <a class="w-9 h-9 rounded-lg bg-surface-card border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-secondary hover:border-secondary/40 transition-all" href="https://www.instagram.com/impianasia/" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16ZM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.12 1.38C1.36 2.67.94 3.34.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.12.66.66 1.33 1.08 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.12-1.38c.66-.66 1.08-1.33 1.38-2.12.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.12A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84ZM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4Zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44Z"/></svg>
+          <a class="w-8 h-8 rounded-md bg-surface border border-line flex items-center justify-center text-ink-soft hover:text-accent hover:border-line-strong transition-all" href="https://www.instagram.com/impianasia/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16ZM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.12 1.38C1.36 2.67.94 3.34.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.12.66.66 1.33 1.08 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.12-1.38c.66-.66 1.08-1.33 1.38-2.12.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.12A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84ZM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4Zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44Z"/></svg>
           </a>
-          <a class="w-9 h-9 rounded-lg bg-surface-card border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-secondary hover:border-secondary/40 transition-all" href="https://www.tiktok.com/@impianasia" target="_blank" rel="noopener" aria-label="TikTok">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.06-2.82h-3.3v13.4a2.59 2.59 0 0 1-2.59 2.5 2.59 2.59 0 1 1 .8-5.05V8.5a5.9 5.9 0 0 0-.8-.05A5.92 5.92 0 1 0 15.27 14.4V8.69a7.55 7.55 0 0 0 4.41 1.41V6.8a4.27 4.27 0 0 1-3.08-.98Z"/></svg>
+          <a class="w-8 h-8 rounded-md bg-surface border border-line flex items-center justify-center text-ink-soft hover:text-accent hover:border-line-strong transition-all" href="https://www.tiktok.com/@impianasia" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.06-2.82h-3.3v13.4a2.59 2.59 0 0 1-2.59 2.5 2.59 2.59 0 1 1 .8-5.05V8.5a5.9 5.9 0 0 0-.8-.05A5.92 5.92 0 1 0 15.27 14.4V8.69a7.55 7.55 0 0 0 4.41 1.41V6.8a4.27 4.27 0 0 1-3.08-.98Z"/></svg>
           </a>
         </div>
       </div>
 
-      <div>
-        <h4 class="text-xs text-on-surface eyebrow mb-5">Layanan</h4>
-        <ul class="space-y-3">
-          <li><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#services">Pembuatan Website</a></li>
-          <li><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#services">Aplikasi &amp; SaaS</a></li>
-          <li><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#services">Konsultan IT</a></li>
-          <li><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#survei">Survei &amp; Data PDRB</a></li>
-          <li><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#survei">Pemberdayaan Masyarakat</a></li>
+      <div class="md:col-span-3">
+        <h4 class="text-xs text-ink eyebrow-bare mb-4">Layanan</h4>
+        <ul class="space-y-2.5">
+          <li><a class="text-sm text-ink-soft hover:text-ink transition-colors" href="#services">Pembuatan Website</a></li>
+          <li><a class="text-sm text-ink-soft hover:text-ink transition-colors" href="#services">Aplikasi &amp; SaaS</a></li>
+          <li><a class="text-sm text-ink-soft hover:text-ink transition-colors" href="#services">Konsultan IT</a></li>
+          <li><a class="text-sm text-ink-soft hover:text-ink transition-colors" href="#survei">Survei &amp; Data PDRB</a></li>
         </ul>
       </div>
 
-      <div>
-        <h4 class="text-xs text-on-surface eyebrow mb-5">Perusahaan</h4>
-        <ul class="space-y-3">
-          <li><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#about">Tentang Kami</a></li>
-          <li><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#legalitas">Legalitas</a></li>
-          <li><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#faq">FAQ</a></li>
-          <li><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#contact">Kontak</a></li>
-          <li><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="privacy-policy.html">Privacy Policy</a></li>
-          <li><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="terms-of-service.html">Terms of Service</a></li>
+      <div class="md:col-span-2">
+        <h4 class="text-xs text-ink eyebrow-bare mb-4">Perusahaan</h4>
+        <ul class="space-y-2.5">
+          <li><a class="text-sm text-ink-soft hover:text-ink transition-colors" href="#about">Tentang</a></li>
+          <li><a class="text-sm text-ink-soft hover:text-ink transition-colors" href="#legalitas">Legalitas</a></li>
+          <li><a class="text-sm text-ink-soft hover:text-ink transition-colors" href="#faq">FAQ</a></li>
+          <li><a class="text-sm text-ink-soft hover:text-ink transition-colors" href="#contact">Kontak</a></li>
         </ul>
       </div>
 
-      <div>
-        <h4 class="text-xs text-on-surface eyebrow mb-5">Produk</h4>
-        <ul class="space-y-3">
-          <li><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="https://pengaduan.impian.asia" target="_blank" rel="noopener">Pengaduan Ai</a></li>
-          <li><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="https://jasaku.impian.asia" target="_blank" rel="noopener">Jasaku</a></li>
+      <div class="md:col-span-2">
+        <h4 class="text-xs text-ink eyebrow-bare mb-4">Produk</h4>
+        <ul class="space-y-2.5">
+          <li><a class="text-sm text-ink-soft hover:text-ink transition-colors" href="https://pengaduan.impian.asia" target="_blank" rel="noopener">Pengaduan Ai</a></li>
+          <li><a class="text-sm text-ink-soft hover:text-ink transition-colors" href="https://jasaku.impian.asia" target="_blank" rel="noopener">Jasaku</a></li>
         </ul>
-        <p class="text-xs text-on-surface-muted mt-6 leading-relaxed">NIB: 1506260002309<br/>KBLI 63111 — Aktivitas Pengolahan Data</p>
+        <ul class="space-y-2.5 mt-5 pt-5 border-t border-line">
+          <li><a class="text-sm text-ink-soft hover:text-ink transition-colors" href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a class="text-sm text-ink-soft hover:text-ink transition-colors" href="terms-of-service.html">Terms of Service</a></li>
+        </ul>
       </div>
 
     </div>
 
-    <div class="mt-12 pt-8 border-t border-outline-variant flex flex-col sm:flex-row justify-between items-center gap-3">
-      <p class="text-xs text-on-surface-muted">© <span id="year"></span> PT Impian Asia Utama. All rights reserved.</p>
-      <p class="text-xs text-on-surface-muted">Manado, Sulawesi Utara</p>
+    <div class="mt-12 pt-6 border-t border-line flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+      <p class="text-xs text-ink-mute">© <span id="year"></span> PT Impian Asia Utama. All rights reserved.</p>
+      <p class="text-xs text-ink-mute">NIB 1506260002309 · KBLI 63111 · Manado, Sulawesi Utara</p>
     </div>
   </div>
 </footer>

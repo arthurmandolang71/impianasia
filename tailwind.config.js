@@ -5,79 +5,67 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // ── Refined dark palette ────────────────────────────────────────────
-        // Neutral navy backgrounds (deeper, less saturated than before)
-        "surface": "#0A1422",            // page background
-        "surface-dim": "#070F1A",        // deepest (footer, contrast bands)
-        "surface-card": "#0F1B2D",       // solid card surface
-        "surface-raised": "#142336",     // raised card on hover
-        "surface-bright": "#1B2D44",     // inputs, hover states
+        // ── Near-black canvas (Linear/Vercel inspired) ──────────────────────
+        "bg": "#08090A",            // page background (near-black)
+        "bg-soft": "#0E0F11",       // alternating sections
+        "surface": "#131417",       // cards
+        "surface-2": "#1A1B1F",     // raised/hover
+        "surface-3": "#222327",     // inputs, strong hover
 
-        // Text
-        "on-surface": "#E8EDF5",         // primary text
-        "on-surface-variant": "#94A3B8", // secondary/muted text
-        "on-surface-muted": "#64748B",   // tertiary/labels
+        // Hairline borders
+        "line": "#1F2024",          // default card border
+        "line-soft": "#17181B",     // section dividers
+        "line-strong": "#2A2B30",   // hover/emphasis
 
-        // Borders & outlines (subtle)
-        "outline": "#475569",
-        "outline-variant": "#1E2D42",    // card border
+        // Text — HIGH contrast for readability (WCAG AA on near-black)
+        "ink": "#FAFAFA",           // primary text (~17:1 on bg)
+        "ink-soft": "#A1A1AA",      // secondary (~7:1)
+        "ink-mute": "#71717A",      // tertiary/labels (~4.5:1)
 
-        // Accents — restrained & mature
-        "secondary": "#34D399",          // emerald (primary accent)
-        "secondary-container": "#0F3D2E",
-        "on-secondary": "#04221A",
-        "tertiary": "#C9A961",           // refined gold (was #ffb95f)
-        "tertiary-container": "#3A2F14",
-        "on-tertiary": "#1F1808",
-
-        // Functional
-        "error": "#F87171",
-        "on-error": "#450A0A",
+        // Single accent — emerald (restrained)
+        "accent": "#10B981",        // primary action
+        "accent-hover": "#059669",
+        "accent-soft": "#0E3B2E",   // tinted bg
+        "accent-ink": "#04130D",    // text on accent
+        "accent-faint": "rgba(16,185,129,0.12)",
       },
       spacing: {
-        "margin-mobile": "20px",
-        "margin-desktop": "64px",
-        "container-max": "1200px",
+        "px-x": "24px",            // horizontal page padding mobile
+        "px-x-lg": "64px",         // horizontal page padding desktop
+        "container": "1120px",     // max width (tighter than 1200 for focus)
         "gutter": "24px",
       },
       maxWidth: {
-        "container-max": "1200px",
+        "container": "1120px",
       },
       fontFamily: {
         "sans": ["Inter", "system-ui", "-apple-system", "sans-serif"],
-        "headline": ["Inter", "system-ui", "sans-serif"],
-        "label": ["Inter", "sans-serif"],
-        "body": ["Inter", "sans-serif"],
       },
+      // Strong, tight type scale — the hierarchy must read at a glance
       fontSize: {
-        // Display scale — refined tracking & line-height for elegance
-        "display": ["clamp(2.5rem, 5vw, 3.75rem)", { "lineHeight": "1.08", "letterSpacing": "-0.025em", "fontWeight": "600" }],
-        "headline-xl": ["clamp(2rem, 4vw, 2.75rem)", { "lineHeight": "1.12", "letterSpacing": "-0.02em", "fontWeight": "600" }],
-        "headline-lg": ["clamp(1.75rem, 3vw, 2.125rem)", { "lineHeight": "1.2", "letterSpacing": "-0.015em", "fontWeight": "600" }],
-        "headline-md": ["1.375rem", { "lineHeight": "1.35", "letterSpacing": "-0.01em", "fontWeight": "600" }],
-        "headline-sm": ["1.125rem", { "lineHeight": "1.4", "fontWeight": "600" }],
+        "display": ["clamp(2.25rem, 5vw, 3.5rem)", { "lineHeight": "1.05", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+        "h1": ["clamp(1.875rem, 3.5vw, 2.5rem)", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "600" }],
+        "h2": ["clamp(1.5rem, 2.8vw, 2rem)", { "lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+        "h3": ["1.25rem", { "lineHeight": "1.3", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+        "h4": ["1.0625rem", { "lineHeight": "1.4", "fontWeight": "600" }],
 
-        // Body
-        "body-lg": ["1.125rem", { "lineHeight": "1.7", "fontWeight": "400" }],
-        "body-md": ["1rem", { "lineHeight": "1.65", "fontWeight": "400" }],
-        "body-sm": ["0.875rem", { "lineHeight": "1.55", "fontWeight": "400" }],
-
-        // Label / eyebrow
-        "label-md": ["0.8125rem", { "lineHeight": "1.2", "letterSpacing": "0.06em", "fontWeight": "500" }],
-        "eyebrow": ["0.75rem", { "lineHeight": "1", "letterSpacing": "0.14em", "fontWeight": "600" }],
+        "lead": ["1.125rem", { "lineHeight": "1.7", "fontWeight": "400" }],
+        "body": ["0.9375rem", { "lineHeight": "1.65", "fontWeight": "400" }],
+        "sm": ["0.8125rem", { "lineHeight": "1.55", "fontWeight": "400" }],
+        "xs": ["0.75rem", { "lineHeight": "1.4", "fontWeight": "500" }],
       },
       boxShadow: {
-        // Soft depth (replaces neon glow)
-        "soft": "0 1px 2px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2)",
-        "card": "0 1px 3px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.18)",
-        "card-hover": "0 2px 6px rgba(0,0,0,0.35), 0 16px 40px rgba(0,0,0,0.25)",
-        "glow": "0 0 0 1px rgba(52,211,153,0.15), 0 8px 32px rgba(52,211,153,0.12)",
+        "card": "0 1px 0 0 rgba(255,255,255,0.02) inset, 0 1px 2px rgba(0,0,0,0.4)",
+        "raise": "0 1px 0 0 rgba(255,255,255,0.04) inset, 0 8px 24px rgba(0,0,0,0.5)",
+        "pop": "0 1px 0 0 rgba(255,255,255,0.05) inset, 0 20px 50px rgba(0,0,0,0.55)",
       },
       borderRadius: {
-        "4xl": "2rem",
+        "lg2": "0.625rem",
+        "xl2": "0.875rem",
+        "2xl2": "1rem",
       },
       transitionTimingFunction: {
-        "out-soft": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "soft": "cubic-bezier(0.16, 1, 0.3, 1)",
       },
     },
   },
