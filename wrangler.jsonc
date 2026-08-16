@@ -2,9 +2,12 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "impianasia",
   "compatibility_date": "2026-06-15",
+  "main": "src/worker.js",
   "assets": {
     "directory": "./public/",
-    "not_found_handling": "none"
+    "binding": "ASSETS",
+    "not_found_handling": "none",
+    "run_worker_first": ["/api/*"]
   },
   "routes": [
     { "pattern": "impian.asia", "custom_domain": true }
