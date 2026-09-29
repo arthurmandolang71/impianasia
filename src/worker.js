@@ -42,14 +42,11 @@ const FORWARD_TIMEOUT_MS = 10_000;
 
 // Body balasan aplikasi tujuan tidak diteruskan ke pemanggil (endpoint ini publik,
 // jadi pesan error/detail internal tujuan jangan sampai terbaca orang lain) —
-// cukup status HTTP-nya supaya Midtrans/Mayar tahu perlu kirim ulang atau tidak.
-async function forwardRaw(url, rawBody, contentType, secret, tag) {
-	const headers = { "content-type": contentType || "application/json" };
-	if (secret) headers["x-dispatcher-secret"] = secret;
-
+// cukup status HTTP-nya supaya Midtrans tahu perlu kirim ulang atau tidak.
+async function forwardRaw(url, rawBody, contentType, tag) {
 	const upstream = await fetch(url, {
 		method: "POST",
-		headers,
+		headers: { "content-type": contentType || "application/json" },
 		body: rawBody,
 		signal: AbortSignal.timeout(FORWARD_TIMEOUT_MS),
 	});
@@ -92,7 +89,7 @@ async function handleMidtransNotification(request) {
 	console.log(`[midtrans-dispatcher] order_id="${orderId}" -> prefix="${route.prefix}" -> ${route.url}`);
 
 	try {
-		return await forwardRaw(route.url, rawBody, request.headers.get("content-type"), null, "midtrans-dispatcher");
+		return await forwardRaw(route.url, rawBody, request.headers.get("content-type"), "midtrans-dispatcher");
 	} catch (err) {
 		console.error(`[midtrans-dispatcher] gagal forward ke ${route.url}: ${err}`);
 		return new Response("Upstream forward failed", { status: 502 });
