@@ -10,7 +10,36 @@ const MIDTRANS_ROUTES = [
 	{ prefix: "JASAKU-SUB-", url: "https://jasaku.impian.asia/api/billing/midtrans/notification" },
 ];
 
+// Dispatcher terpusat untuk webhook Mayar. Satu akun Mayar cuma bisa punya
+// satu Webhook URL (Integration -> Webhook di dashboard Mayar), jadi semua
+// produk SaaS di bawah impian.asia yang pakai Mayar juga lapor ke sini,
+// di-forward berdasarkan `data.productId` (Product ID dari dashboard Mayar,
+// beda per aplikasi) ke aplikasi tujuan masing-masing.
+//
+// Mayar tidak punya signature/secret untuk verifikasi payload webhook (beda
+// dari Midtrans yang punya signature_key) — aplikasi tujuan tetap harus
+// validasi ulang status transaksi ke Mayar API sebelum mengaktifkan apa pun.
+const MAYAR_ROUTES = [
+	// { productId: "isi-product-id-dari-dashboard-mayar", url: "https://contoh.impian.asia/api/billing/mayar/webhook" },
+];
+
 const FORWARD_TIMEOUT_MS = 10_000;
+
+async function forwardRaw(url, rawBody, contentType) {
+	const upstream = await fetch(url, {
+		method: "POST",
+		headers: { "content-type": contentType || "application/json" },
+		body: rawBody,
+		signal: AbortSignal.timeout(FORWARD_TIMEOUT_MS),
+	});
+
+	const upstreamBody = await upstream.text();
+
+	return new Response(upstreamBody, {
+		status: upstream.status,
+		headers: { "content-type": upstream.headers.get("content-type") || "application/json" },
+	});
+}
 
 async function handleMidtransNotification(request) {
 	if (request.method !== "POST") {
@@ -42,22 +71,46 @@ async function handleMidtransNotification(request) {
 	console.log(`[midtrans-dispatcher] order_id="${orderId}" -> prefix="${route.prefix}" -> ${route.url}`);
 
 	try {
-		const upstream = await fetch(route.url, {
-			method: "POST",
-			headers: { "content-type": request.headers.get("content-type") || "application/json" },
-			body: rawBody,
-			signal: AbortSignal.timeout(FORWARD_TIMEOUT_MS),
-		});
-
-		const upstreamBody = await upstream.text();
-		console.log(`[midtrans-dispatcher] forward selesai, status upstream=${upstream.status}`);
-
-		return new Response(upstreamBody, {
-			status: upstream.status,
-			headers: { "content-type": upstream.headers.get("content-type") || "application/json" },
-		});
+		return await forwardRaw(route.url, rawBody, request.headers.get("content-type"));
 	} catch (err) {
 		console.error(`[midtrans-dispatcher] gagal forward ke ${route.url}: ${err}`);
+		return new Response("Upstream forward failed", { status: 502 });
+	}
+}
+
+async function handleMayarWebhook(request) {
+	if (request.method !== "POST") {
+		return new Response("Method Not Allowed", { status: 405 });
+	}
+
+	const rawBody = await request.text();
+
+	let productId;
+	try {
+		productId = JSON.parse(rawBody)?.data?.productId;
+	} catch {
+		console.warn("[mayar-dispatcher] body bukan JSON valid, ditolak");
+		return new Response("Invalid JSON body", { status: 400 });
+	}
+
+	if (typeof productId !== "string") {
+		console.warn("[mayar-dispatcher] webhook tanpa data.productId, ditolak");
+		return new Response("Missing data.productId", { status: 400 });
+	}
+
+	const route = MAYAR_ROUTES.find((r) => r.productId === productId);
+
+	if (!route) {
+		console.warn(`[mayar-dispatcher] tidak ada rute untuk productId="${productId}"`);
+		return new Response("No route for productId", { status: 404 });
+	}
+
+	console.log(`[mayar-dispatcher] productId="${productId}" -> ${route.url}`);
+
+	try {
+		return await forwardRaw(route.url, rawBody, request.headers.get("content-type"));
+	} catch (err) {
+		console.error(`[mayar-dispatcher] gagal forward ke ${route.url}: ${err}`);
 		return new Response("Upstream forward failed", { status: 502 });
 	}
 }
@@ -68,6 +121,10 @@ export default {
 
 		if (url.pathname === "/api/midtrans/notification") {
 			return handleMidtransNotification(request);
+		}
+
+		if (url.pathname === "/api/mayar/webhook") {
+			return handleMayarWebhook(request);
 		}
 
 		return new Response("Not Found", { status: 404 });
