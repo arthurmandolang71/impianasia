@@ -12,15 +12,23 @@ const MIDTRANS_ROUTES = [
 
 // Dispatcher terpusat untuk webhook Mayar. Satu akun Mayar cuma bisa punya
 // satu Webhook URL (Integration -> Webhook di dashboard Mayar), jadi semua
-// produk SaaS di bawah impian.asia yang pakai Mayar juga lapor ke sini,
-// di-forward berdasarkan `data.productId` (Product ID dari dashboard Mayar,
-// beda per aplikasi) ke aplikasi tujuan masing-masing.
+// produk SaaS di bawah impian.asia yang pakai Mayar juga lapor ke sini, lalu
+// di-forward ke aplikasi tujuan berdasarkan `match(data)`. Tiap aplikasi bisa
+// punya cara identifikasi beda: yang produknya tetap dicocokkan lewat
+// `data.productId`, yang bikin invoice baru tiap transaksi (productId
+// berubah-ubah) dicocokkan lewat field custom yang mereka set sendiri saat
+// create invoice (mis. `data.extraData.idProd`).
 //
 // Mayar tidak punya signature/secret untuk verifikasi payload webhook (beda
 // dari Midtrans yang punya signature_key) — aplikasi tujuan tetap harus
 // validasi ulang status transaksi ke Mayar API sebelum mengaktifkan apa pun.
 const MAYAR_ROUTES = [
-	// { productId: "isi-product-id-dari-dashboard-mayar", url: "https://contoh.impian.asia/api/billing/mayar/webhook" },
+	{
+		label: "datangneh (extraData.idProd)",
+		match: (data) => data?.extraData?.idProd === "datangneh-license",
+		url: "https://app.datangneh.my.id/api/mayar/webhook",
+	},
+	// { label: "jasaku (productId tetap)", match: (data) => data?.productId === "isi-product-id-dari-dashboard-mayar", url: "https://jasaku.impian.asia/api/billing/mayar/webhook" },
 ];
 
 const FORWARD_TIMEOUT_MS = 10_000;
@@ -85,27 +93,22 @@ async function handleMayarWebhook(request) {
 
 	const rawBody = await request.text();
 
-	let productId;
+	let data;
 	try {
-		productId = JSON.parse(rawBody)?.data?.productId;
+		data = JSON.parse(rawBody)?.data;
 	} catch {
 		console.warn("[mayar-dispatcher] body bukan JSON valid, ditolak");
 		return new Response("Invalid JSON body", { status: 400 });
 	}
 
-	if (typeof productId !== "string") {
-		console.warn("[mayar-dispatcher] webhook tanpa data.productId, ditolak");
-		return new Response("Missing data.productId", { status: 400 });
-	}
-
-	const route = MAYAR_ROUTES.find((r) => r.productId === productId);
+	const route = MAYAR_ROUTES.find((r) => r.match(data));
 
 	if (!route) {
-		console.warn(`[mayar-dispatcher] tidak ada rute untuk productId="${productId}"`);
-		return new Response("No route for productId", { status: 404 });
+		console.warn(`[mayar-dispatcher] tidak ada rute cocok untuk payload: productId="${data?.productId}" extraData=${JSON.stringify(data?.extraData)}`);
+		return new Response("No route matched", { status: 404 });
 	}
 
-	console.log(`[mayar-dispatcher] productId="${productId}" -> ${route.url}`);
+	console.log(`[mayar-dispatcher] cocok dengan rute "${route.label}" -> ${route.url}`);
 
 	try {
 		return await forwardRaw(route.url, rawBody, request.headers.get("content-type"));
